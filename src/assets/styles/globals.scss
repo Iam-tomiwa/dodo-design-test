@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	line-height: 1.5;
+	font-weight: 400;
+	line-height: 1.5;
+	font-weight: 400;
+	@apply text-gray;
+}
+
+.heading-1 {
+	@apply text-2xl font-semibold text-gray-950;
+}
+
+.heading-2 {
+	@apply text-xl font-semibold text-gray-950;
+}
+
+.heading-3 {
+	@apply text-lg font-semibold;
+}
+
+.sub-heading {
+	@apply text-sm;
+}
+
+.link-text {
+	@apply font-semibold underline text-primary;
+}
+
+.form-container {
+	@apply py-8 2xl:py-10 px-4 2xl:px-6 rounded-2xl border border-black/5;
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (max-width: 960px) {
+	.container {
+		max-width: 100% !important;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 980px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1150px;
+	}
+}
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1300px;
+	}
+}
+
+.icon-btn {
+	@apply rounded-full w-11 h-11 border border-primary-50 flex justify-center items-center hover:bg-primary-50;
+}

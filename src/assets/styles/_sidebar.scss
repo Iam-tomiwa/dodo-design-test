@@ -1,0 +1,117 @@
+@use "./utils" as *;
+
+.z-sidebar {
+	position: sticky;
+	top: 0;
+	bottom: 0;
+	min-width: 280px;
+	max-width: 280px;
+	width: 280px;
+	height: calc(100dvh);
+	z-index: 100;
+	transition: all 0.3s linear;
+
+	@apply border-r border-gray-200 flex;
+
+	&-wrapper {
+		padding: 1rem 0.75rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		overflow-y: auto;
+		flex-grow: 2;
+		height: 100%;
+		/* Targeting the scrollbar itself */
+		&::-webkit-scrollbar {
+			width: 5px;
+			height: 5px;
+		}
+
+		/* Targeting the draggable part of the scrollbar */
+		&::-webkit-scrollbar-thumb {
+			// background-color: map.get($colors, "neutral-800");
+			border-radius: 10px;
+		}
+
+		/* Targeting the track (part the thumb slides within) */
+		&::-webkit-scrollbar-track {
+			// background: map.get($colors, "primary-700");
+			border-radius: 10px;
+		}
+	}
+
+	@include mq(desktop) {
+		width: 80%;
+		max-width: 250px;
+	}
+
+	.sidebar-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.sidebar-item {
+		@apply inline-flex items-center justify-start transition-colors;
+		border-radius: 8px;
+		padding: 0.5rem 1rem;
+		width: 100%;
+		gap: 1rem;
+		font-size: 1rem;
+		font-weight: 500;
+		overflow: hidden;
+		white-space: nowrap;
+
+		cursor: pointer;
+
+		svg {
+			height: 24px;
+			width: 24px;
+			min-height: 24px;
+			min-width: 24px;
+			float: left;
+		}
+
+		&.link-active {
+			position: relative;
+			svg {
+				color: inherit;
+			}
+		}
+	}
+	.close-btn {
+		display: none;
+	}
+
+	.bottom {
+		margin-top: auto;
+		margin-bottom: 3rem;
+		.sidebar-item {
+			color: inherit;
+			svg {
+				opacity: 1;
+			}
+		}
+	}
+
+	@include mq(desktop) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100dvh;
+		transform: translateX(-150vw);
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		transition: transform 0.5s ease-in-out;
+		&.show-sidebar {
+			transform: translateX(0);
+		}
+		.close-btn {
+			display: flex;
+			position: absolute;
+			top: 0.5rem;
+			right: -3rem;
+		}
+	}
+}
