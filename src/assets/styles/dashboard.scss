@@ -13,7 +13,7 @@
 		.dashboard-content {
 			flex-grow: 2;
 			height: 100%;
-			@apply p-4 xl:p-6;
+			@apply p-4 xl:p-6 pb-10;
 		}
 		@include mq(tablet) {
 			width: 100%;
