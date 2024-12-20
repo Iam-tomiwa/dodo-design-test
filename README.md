@@ -75,6 +75,34 @@ View and interact with your tests via UI.
 pnpm run test:ui
 ```
 
+### Recommendations for Improvement
+
+To further enhance this project, consider the following recommendations:
+
+1. Integrate Material-UI:
+
+  - Add Material-UI (MUI) components for more optimized, accessible, and visually consistent user interfaces.
+
+  - Replace some custom or Tailwind components with MUI equivalents for better performance and additional features.
+
+2. Implement State Management:
+
+  - Integrate a state management library like Redux or Zustand to handle complex state efficiently.
+
+  - This will simplify data flow, especially for scalable applications.
+
+3. Improve Testing Coverage:
+
+  - Once features are explicit, we can integrate Vitest and Testing Library test suites to cover edge cases and improve overall code reliability.
+
+  - Include snapshot testing for UI consistency.
+
+4. Component Documentation:
+
+  - Use a tool like Storybook to document and visualize UI components, making the project more developer-friendly.
+
+
+
 ## License
 
 This project is licensed under the MIT License.
