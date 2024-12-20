@@ -7,7 +7,7 @@ interface ResourceCardProps {
 }
 export default function ResourceCard({ name, description }: ResourceCardProps) {
 	return (
-		<Link to={""} className="flex flex-col rounded-xl border border-gray-200">
+		<Link to={""} className="flex bg-white flex-col rounded-xl border border-gray-200">
 			<div className="aspect-video w-full rounded-t-xl bg-primary-100">
 				<img
 					className="size-full object-contain"
