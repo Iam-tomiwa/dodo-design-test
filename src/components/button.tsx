@@ -26,16 +26,10 @@ const Button: React.FC<ButtonProps> = ({
 		primary: {
 			contained: "bg-primary text-white hover:bg-primary-700",
 			outlined:
-				"border border-primary text-blue-600 hover:bg-primary hover:bg-opacity-15",
+				"border border-primary text-primary hover:bg-primary hover:bg-opacity-15",
 			text: "text-primary hover:bg-primary hover:bg-opacity-15",
 		},
-		// TODO: update with secondary color
-		white: {
-			contained: "bg-white text-gray-800 hover:bg-gray-100",
-			outlined:
-				"border border-gray-300 text-white hover:bg-gray-50 hover:bg-opacity-15",
-			text: "text-white hover:bg-white hover:bg-opacity-15",
-		},
+		// TODO: update with other color
 	};
 
 	// Fallback to avoid undefined styles

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
 
-interface AvatarProps {
+export interface AvatarProps {
 	src: string;
 	alt: string;
 	size?: "sm" | "md" | "lg" | "xl";

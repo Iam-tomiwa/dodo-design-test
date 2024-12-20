@@ -8,7 +8,6 @@ import React, {
 export type InputProps = {
 	label?: string;
 	id?: string;
-	type?: string;
 	className?: string;
 	preffix?: ReactNode; // Node before the input (e.g., icon)
 	suffix?: ReactNode; // Node after the input (e.g., icon)

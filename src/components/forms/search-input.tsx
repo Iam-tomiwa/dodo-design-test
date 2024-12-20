@@ -25,6 +25,7 @@ function SearchInput(props: InputProps) {
 			{...props}
 			containerClass="!mb-0 w-full"
 			preffix={<SearchIcon />}
+			type="search"
 			ref={inputRef} // Attach the ref to the input
 			placeholder={props.placeholder || "Search"}
 		/>
